@@ -7,6 +7,7 @@ Example 1:
 
 Input: J = "aA", S = "aAAbbbb"
 Output: 3
+
 Example 2:
 
 Input: J = "z", S = "ZZ"
