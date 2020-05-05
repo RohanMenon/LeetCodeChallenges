@@ -1,3 +1,6 @@
-# LeetCode Challenges for the Month of May
+# LeetCode Challenges solved for the following months:
 
-Have created this repo citing solution to challenges I solve on LeetCode.
+- May (on-going)
+
+
+
