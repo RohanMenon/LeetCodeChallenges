@@ -6,4 +6,4 @@ My name is Rohan and I've created this respository to add my solutions to the pr
 
 I am always welcome contructive criticism, especially when it comes to coding. So if you have time and think you can improve/optimize the solutions I add or have added to this repository, do raise a PR for the same. Who knows, we might end up learning something entirely new :D!!
 
-If you want to raise a PR, you can checkout the *pr_template.md*
+If you want to raise a PR, you can checkout the *.github/pull_request_template.md*
