@@ -16,12 +16,12 @@ class Solution {
     public int majorityElement(int[] nums) {
         int frequency = nums.length/2;
         int max = 0;
-        Map<Integer, Integer> frequency_map = new HashMap<>();
+        TreeMap<Integer, Integer> frequency_map = new TreeMap<>();
         for(int i=0;i<nums.length;i++){
-            if(frequency_map.containsKey(nums[i]))
-                frequency_map.put(nums[i], frequency_map.get(nums[i])+1);
+            if(frequency_map.get(nums[i]) == null)
+                frequency_map.put(nums[i], 1);
             else
-                frequency_map.put(nums[i], 1);               
+                frequency_map.put(nums[i], frequency_map.get(nums[i])+1);               
         }
         
         for(Map.Entry<Integer, Integer> entry : frequency_map.entrySet()){
