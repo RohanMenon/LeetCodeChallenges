@@ -30,7 +30,7 @@ Each node has a unique integer value from 1 to 100.
 
 
 /**
- * Definition for a binary tree node.
+ * Definition for a binary tree node.  [This class definition is already given.]
  * public class TreeNode {
  *     int val;
  *     TreeNode left;
