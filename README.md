@@ -4,7 +4,7 @@
 
 ## Hey guys!
 
-My name is Rohan and I've created this respository to add my solutions to the problems in the monthly coding challenge hosted on [**LeetCode**](https://leetcode.com/explore/). Although the coding challenges started last month (i.e. Arpil, 2020), I got to know about them when the May challenge started since I've never used LeetCode before (I am (or was!) an avid user of [Hackerrank](https://www.hackerrank.com/DeathStroke96)). So I thought why not restart my competitive coding streak and improve on it!
+My name is Rohan and I've created this respository to add my solutions to the problems in the monthly coding challenge hosted on [**LeetCode**](https://leetcode.com/explore/). Although the coding challenges started last month (i.e. Arpil, 2020), I got to know about them when the May challenge started since I've never used LeetCode before (I am (or was!) an avid user of [**Hackerrank**](https://www.hackerrank.com/DeathStroke96)). So I thought why not restart my competitive coding streak and improve on it!
 
 Since I can still solve the challenges from the month of April, I have started adding them [here](April), so do check those out too.
 
