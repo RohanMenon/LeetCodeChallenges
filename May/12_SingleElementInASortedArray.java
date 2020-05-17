@@ -18,11 +18,18 @@ Note: Your solution should run in O(log n) time and O(1) space.
 
 class Solution {
     public int singleNonDuplicate(int[] nums) {
-        int result = nums[0];
-        for(int i=1;i<nums.length;i++){
-            result ^= nums[i];
+        int length = nums.length, mid = 0;
+        int l = 0, r = length-1;
+        
+        while(l < r){
+            mid = l + (r-l)/2;
+            
+            if((mid%2 == 0 && nums[mid+1] == nums[mid]) || (mid%2 == 1 && nums[mid-1] == nums[mid]))
+                l = mid + 1;
+            else
+                r = mid;
         }
         
-        return result;
+        return nums[l];
     }
 }
