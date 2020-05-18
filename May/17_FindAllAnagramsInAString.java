@@ -33,34 +33,41 @@ The substring with start index = 2 is "ab", which is an anagram of "ab".
 
 
 class Solution {
-    public boolean isAnagram(String a, String b){
-        int[] a_frequency = new int[26];
-        int[] b_frequency = new int[26];
-        boolean flag = true;
+    public boolean isEqual(int[] a, int[] b){
+        for(int i=0;i<26;i++) if(a[i] != b[i]) return false;
         
-        for(int i=0;i<26;i++) a_frequency[i] = 0;
-        for(int i=0;i<26;i++) b_frequency[i] = 0;
-        
-        for(int i=0;i<a.length();i++) a_frequency[a.charAt(i) - 'a'] += 1;
-        for(int i=0;i<b.length();i++) b_frequency[b.charAt(i) - 'a'] += 1;
-        
-        for(int i=0;i<26;i++)
-            if(a_frequency[i] != b_frequency[i]){
-                flag = false;
-                break;
-            }
-        
-        return flag;
+        return true;
     }
 
     public List<Integer> findAnagrams(String s, String p) {
-        int pLength = p.length();
-        List<Integer> result = new ArrayList<>();
-        for(int i=0;i+pLength<=s.length();i++){
-            if(isAnagram(s.substring(i, i + pLength), p))
-                result.add(i);
+        int pLen = p.length();
+        int sLen = s.length();
+        int start = 0;
+        
+        if(sLen < pLen)
+            return new ArrayList();
+        
+        int[] pFreq = new int[26];
+        int[] sFreq = new int[26];
+        
+        for(int i=0;i < pLen;i++){
+            pFreq[p.charAt(i) - 'a'] += 1;
+            sFreq[s.charAt(i) - 'a'] += 1;
         }
         
+        List<Integer> result = new ArrayList<>();
+        for(int i = pLen;i < sLen;i++){
+            if(isEqual(pFreq, sFreq))
+                result.add(start);
+        
+            sFreq[s.charAt(start) - 'a'] -= 1;
+            sFreq[s.charAt(i) - 'a'] += 1;
+            start += 1;  
+        }
+        
+        if(isEqual(pFreq, sFreq))
+            result.add(start);
+                
         return result;
     }
 }
