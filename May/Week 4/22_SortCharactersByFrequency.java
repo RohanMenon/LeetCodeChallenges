@@ -44,7 +44,10 @@ class Solution {
         TreeMap<Character, Integer> frequency = new TreeMap<>();
         
         for(char c: s.toCharArray()){
-            frequency.put(c, frequency.getOrDefault(c, 0) + 1);
+            if(frequency.containsKey(c))
+                frequency.put(c, frequency.get(c) + 1);
+            else
+                frequency.put(c, 1);
         }
         
         PriorityQueue<Character> orderFreq = new PriorityQueue<>((x, y) -> 
